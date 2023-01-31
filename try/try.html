@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/f276ecc4c7.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<style>
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#first-section{
+    display: flex;
+    margin-left: -14%;
+    justify-content: space-between;
+}
+#first-section div{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+}
+#second-section{
+    display: flex;
+    justify-content: space-between;
+   margin-right: -12%;
+}
+#second-section div{
+    display: flex;
+    padding: 5px 15px;
+}
+#first-section a, #second-section a{
+    font-size:11px;
+    color: rgba(0,0,0,.8);;
+}
+#nav-upper-section{
+    display: flex;
+    justify-content: space-around;
+    background: rgb(238,238,238);
+    padding: 4px 0px;
+}
+
+/*>>>>>>>>>>>>>Dropdwn CSS>>>>>>>>>>>>>>>>>>*/
+#first-div{
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex:0.7;
+/* border: 2px solid black; */
+}
+
+#nav-mid-section{
+display: flex;
+justify-content: center;
+border-bottom: 1px solid grey;
+}
+#second-div{
+display: flex;
+
+}
+#login-wishlist-cart{
+display: flex;
+align-items: center;
+}
+#search{
+display: flex;
+align-items: center;
+}
+#logo{
+width:20%;
+object-fit: cover;
+display: flex; 
+align-items: center;
+}
+#logo img{
+width: 100%;
+}
+#dropdown a{
+padding: 0px 12px;
+}
+#dropdown{
+display: flex;
+flex:1;
+font-size: 13px;
+font-family: montserrat,sans-serif;
+vertical-align: middle;
+line-height: 45px;
+padding: 0 5%;
+letter-spacing: 1px;
+font-weight: 520;
+}
+#second-div{
+display: flex;
+width: 30%;
+margin: 7px 0px;;
+}
+#search{
+display: flex;
+width: 70%;
+padding: 0px 4%;
+border-radius: 5px;
+background-color: rgb(234,234,234);
+}
+
+.searchbtn{
+width: 100%;
+flex:9;
+background-color: rgb(234,234,234);border: none;
+}
+.searchbtn:focus{
+outline:none;
+
+}
+nav{
+    position: sticky;
+    top:0;
+}
+#login-wishlist-cart{
+width: 30%;
+display: flex;justify-content: space-around;
+border-left: 1px solid black;
+margin-left: 4%;
+}
+#login-wishlist-cart i{
+font-size:20px;
+
+}
+
+#login-wishlist-cart p{
+font-family: montserrat,sans-serif;
+vertical-align: middle;
+line-height: 45px;
+letter-spacing: 1px;
+}
+#search-logo{
+flex:1;
+font-size: 18px;
+}
+
+#parent-div{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    /* border: 2px solid red; */
+    padding: 15px 0px;
+}
+#parent-div a{
+    font-size:17px;font-family: montserrat,sans-serif;
+    /* padding: 0px 7%; */
+    color: black;
+}
+#nav-below-section{
+    position:sticky;
+    top:5;
+}
+
+
+/* /////////////////////////////////////////// */
+.dropbtn {
+  /* background-color: #04AA6D; */
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {text-decoration: underline;}
+
+.dropdown:hover .dropdown-content {display: flex; width:1000%; padding-left: 30px; background: white;  margin-left: -70px;}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+</style>
+<body>
+    <nav id="nav">
+     <!-- !Nav Upper Section -->
+     <div id="nav-upper-section">
+        <div id="first-section">
+          <div><a href="">Offers</a></div>
+          <div><a href="">Fanbook</a></div>
+          <div><a href="">Download App</a></div>
+          <div><a href="">TriBe Membership</a></div>
+        </div>
+        <div id="second-section">
+          <div><a href="">Contact Us</a></div>
+          <div><a href="">Track Order</a></div>
+        </div>
+      </div>
+  
+      <!-- !Nav Mid Section -->
+      <div id="nav-mid-section">
+        <!-- ?First - div which contains logo and men woman and mobile covers -->
+        <div id="first-div">
+          <div id="logo">
+            <img
+              src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"
+              alt=""
+            />
+          </div>
+          <div  id="dropdown">
+            <div class="dropdown">
+                <a class="dropbtn" id="dropbtn">MEN</a>
+                <div class="dropdown-content">
+                    <div>
+                      <a href="#">Topwear</a>
+                      <a href="#">Printed T-Shirts</a>
+                      <a href="#">Oversized T-shirts</a>
+                      <a href="#">Plain T-Shirts</a>
+                      <a href="#">Fashion T-Shirts</a>
+                      <a href="#">Activewear T-Shirts</a>
+                      <a href="#">Full Sleeve T-Shirts</a>
+                      <a href="#"> Half Sleeve T-Shirts</a>
+                      <a href="#"> Shirts</a>
+                      <a href="#">Vests</a>
+                      <a href="#">Co-ord Sets</a>
+                      <a href="#">Kurtas</a>
+                      <a href="#">HenleysPlus Size</a>
+                      <a href="#">T-Shirts</a>
+                      <a href="#">Jackets</a>
+                      <a href="#">Sweatshirts</a>
+                      <a href="#"> TopwearPolo  & Hoodies</a>
+                      </div>
+                      <div>
+                      <a href="#">Bottomwear</a>
+                      <a href="#">Joggers</a>
+                      <a href="#">Pyjamas</a>
+                      <a href="#">Shorts</a>
+                      <a href="#">Jeans & Denims</a>
+                      <a href="#">Boxers</a>
+                      <a href="#">Briefs</a>
+                      <a href="#">Trunks</a>
+                      <a href="#">Hipster Trunks</a>
+                      <a href="#">Trousers & Pants</a>
+                      <a href="#">Activewear Shorts</a>
+                      <a href="#">Activewear Joggers</a>
+                      <a href="#">Plus Size BottomwearAll</a>
+                      <a href="#">Bottomwear</a>
+                    </div>
+                    <div>
+                          <a href="#">Winterwear</a>
+                          <a href="#">Sweatshirts & Hoodies</a>
+                          <a href="#">Jackets</a>
+                          <a href="#">Sweaters</a>
+                          <a href="#">Joggers</a>
+                          <a href="#">Full Sleeve</a>
+                          <a href="#">T-ShirtsPlus Size </a>
+
+                      </div>
+                    </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn" id="dropbtn">WOMEN</a>
+                <div class="dropdown-content">
+                    <div>
+                      <a href="#">Topwear</a>
+                      <a href="#">Printed T-Shirts</a>
+                      <a href="#">Oversized T-shirts</a>
+                      <a href="#">Plain T-Shirts</a>
+                      <a href="#">Fashion T-Shirts</a>
+                      <a href="#">Activewear T-Shirts</a>
+                      <a href="#">Full Sleeve T-Shirts</a>
+                      <a href="#"> Half Sleeve T-Shirts</a>
+                      <a href="#"> Shirts</a>
+                      <a href="#">Vests</a>
+                      <a href="#">Co-ord Sets</a>
+                      <a href="#">Kurtas</a>
+                      <a href="#">HenleysPlus Size</a>
+                      <a href="#">T-Shirts</a>
+                      <a href="#">Jackets</a>
+                      <a href="#">Sweatshirts</a>
+                      <a href="#"> TopwearPolo  & Hoodies</a>
+                      </div>
+                      <div>
+                      <a href="#">Bottomwear</a>
+                      <a href="#">Joggers</a>
+                      <a href="#">Pyjamas</a>
+                      <a href="#">Shorts</a>
+                      <a href="#">Jeans & Denims</a>
+                      <a href="#">Boxers</a>
+                      <a href="#">Briefs</a>
+                      <a href="#">Trunks</a>
+                      <a href="#">Hipster Trunks</a>
+                      <a href="#">Trousers & Pants</a>
+                      <a href="#">Activewear Shorts</a>
+                      <a href="#">Activewear Joggers</a>
+                      <a href="#">Plus Size BottomwearAll</a>
+                      <a href="#">Bottomwear</a>
+                    </div>
+                    <div>
+                          <a href="#">Winterwear</a>
+                          <a href="#">Sweatshirts & Hoodies</a>
+                          <a href="#">Jackets</a>
+                          <a href="#">Sweaters</a>
+                          <a href="#">Joggers</a>
+                          <a href="#">Full Sleeve</a>
+                          <a href="#">T-ShirtsPlus Size </a>
+
+                      </div>
+                    </div>
+            </div>
+            <div><a class="dropbtn">MOBILE COVERS</a></div>
+          </div>
+        </div>
+  
+        <div id="second-div">
+          <div id="search">
+            <div id="search-logo">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="search"
+              class="searchbtn"
+              placeholder="Search by product, category or collection"
+            />
+          </div>
+          <div id="login-wishlist-cart">
+            <p>Login</p>
+            <div><i class="fa-regular fa-heart"></i></div>
+            <div><i class="fa-solid fa-cart-shopping"></i></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+</body>
+</html>
