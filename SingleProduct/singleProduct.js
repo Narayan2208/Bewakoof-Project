@@ -1,17 +1,6 @@
 import desc from "./desc.js";
 import offers from "./offers.js";
 
-async function getData() {
-  const jsondata = await fetch("https://bewakoof-api.onrender.com/mens");
-  const data = await jsondata.json();
-  var d = JSON.stringify(data);
-  // console.log(data);
-  // console.log(d);
-
-  displayData(data[3]);
-}
-getData();
-
 var d = {
   image:
     "https://images.bewakoof.com/t640/lost-mountains-half-sleeve-t-shirt-272010-1655748131-1.jpg",
@@ -40,7 +29,7 @@ var d = {
 };
 
 // console.log(d);
-// displayData(d);
+displayData(d);
 function displayData(element) {
   document.getElementById("product").innerHTML = `
     <div class="col-md-6 ps-md-5">
