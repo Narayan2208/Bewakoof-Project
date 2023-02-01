@@ -21,7 +21,7 @@ function getData() {
     let phoneNumbers = JSON.parse(localStorage.getItem("phoneNumbers")) || [];
     if (phoneNumbers.includes(phoneInputField.value)) {
         alert("number is already registered");
-        window.location.href = "./otp.html";
+        window.location.href = "./send_otp.html";
     } else {
         phoneNumbers.push(phoneInputField.value);
         localStorage.setItem("phoneNumbers", JSON.stringify(phoneNumbers));

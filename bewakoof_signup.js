@@ -55,6 +55,6 @@ signupBtn.addEventListener("click", function () {
     console.log(signUpArray);
     localStorage.setItem("BewakoofData", JSON.stringify(signUpArray));
 
-    window.location.href = "./index.html";
+    window.location.href = "./send_otp.html";
 
 });
