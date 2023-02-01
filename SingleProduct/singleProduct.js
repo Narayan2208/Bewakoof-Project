@@ -77,7 +77,7 @@ function displayData(element) {
         <div>
             <hr>
                 <p class="pe-md-5">
-                TriBe members get an extra discount of <span class="fw-bold">₹40</span> and FREE shipping.</p><a>Learn more</a></p>
+                TriBe members get an extra discount of <span class="fw-bold">₹40</span> and FREE shipping.</p><a style="color:#42a2a2">Learn more</a></p>
                 </p>
             <hr>
         </div>
@@ -185,6 +185,14 @@ function displayData(element) {
       var cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(obj);
       localStorage.setItem("cart", JSON.stringify(cart));
+      e.target.innerHTML = `<i class="fa-solid fa-bag-shopping me-2"></i>GO TO BAG`;
+      e.target.onclick = function () {
+        goToCart();
+      };
+    } else if (e.target.textContent === "WISHLIST") {
+      e.target.innerHTML = ` <i class="fa-regular fa-heart me-2"></i>WISHLISTED`;
+      let h = document.querySelector(".fa-heart");
+      h.style.color = "red";
     }
   });
 
@@ -211,4 +219,9 @@ function displayData(element) {
 
   document.querySelector("#offers div").innerHTML = offers();
   document.querySelector("#description div").innerHTML = desc();
+}
+
+//redirecting
+function goToCart() {
+  location.href("cart.html");
 }
