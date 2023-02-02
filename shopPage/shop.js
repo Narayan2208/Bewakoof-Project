@@ -1,6 +1,7 @@
 import card from "./card.js";
 
 var products;
+var preProducts;
 async function getData() {
   const jsondata = await fetch("https://bewakoof-api.onrender.com/mens");
   const data = await jsondata.json();
@@ -15,9 +16,9 @@ async function getData() {
       element.tagColor = "#615E5A";
     }
   });
-  products = data;
   displayData(data);
-  event(data);
+
+  return data;
 }
 getData();
 
@@ -57,6 +58,7 @@ function displayData(array) {
     let d = document.getElementById(`product${index}`);
     // console.log(d);
   });
+  event(array);
 }
 
 function event(array) {
@@ -73,11 +75,50 @@ function event(array) {
 let brands = document.querySelectorAll(".brand");
 for (let i = 0; i < brands.length; i++) {
   brands[i].addEventListener("click", function () {
-    let needBrand = brands[i].textContent;
-    let newProducts = products.filter((element) => {
-      return element.brand == needBrand;
+    var Data = getData();
+    Data.then((data) => {
+      let needBrand = brands[i].textContent;
+      let newProducts = data.filter((element) => {
+        return element.brand == needBrand;
+      });
+      products = newProducts;
+      displayData(newProducts);
     });
-    console.log(newProducts);
-    displayData(newProducts);
+  });
+}
+
+let colors = document.querySelectorAll(".color");
+for (let i = 0; i < colors.length; i++) {
+  colors[i].addEventListener("click", function () {
+    let needCol = colors[i].textContent;
+    needCol = needCol.trim();
+    let np = products.filter((element) => {
+      return element.color == needCol;
+    });
+    preProducts = np;
+    console.log(products, np);
+    displayData(np);
+  });
+}
+
+let sleeves = document.querySelectorAll(".sleeve");
+for (let i = 0; i < sleeves.length; i++) {
+  sleeves[i].addEventListener("click", function () {
+    let needSlv = sleeves[i].textContent;
+    needSlv = needSlv.trim();
+    let np = preProducts.filter((element) => {
+      if (needSlv == "Half Sleeve") {
+        return element.title.includes("Oversized");
+      }
+      if (needSlv == "Full Sleeve") {
+        return element.title.includes("Full");
+      }
+      if (needSlv == "Sleeveless") {
+        return element.title.includes("Tank");
+      }
+    });
+
+    console.log(products, np);
+    displayData(np);
   });
 }
