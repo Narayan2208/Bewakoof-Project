@@ -1,7 +1,5 @@
-import footer from "../componenets/footer.js";
 
-let footeradd = document.querySelector("footer");
-footeradd.innerHTML = footer();
+
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".wrapper i");
@@ -75,3 +73,6 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+
+
