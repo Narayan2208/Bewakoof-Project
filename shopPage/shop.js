@@ -59,7 +59,48 @@ function displayData(array) {
     // console.log(d);
   });
   event(array);
+
+  //adding sort element
+  let div = document.createElement("div");
+  let innerdiv = document.createElement("div");
+  innerdiv.classList.add("d-flex", "justify-content-end", "pe-2");
+  div.classList.add("d-none", "d-md-block", "py-4");
+
+  let p1 = document.createElement("p");
+  let p2 = document.createElement("p");
+  let p3 = document.createElement("p");
+  p1.classList.add("px-2", "fw-bold");
+  p2.classList.add("px-2");
+  p3.classList.add("px-2");
+  p1.textContent = "SORT BY";
+  p2.textContent = "Popular";
+  p3.innerHTML = `<i class="fa-solid fa-angle-down"></i>`;
+  innerdiv.append(p1, p2, p3);
+  div.append(innerdiv);
+  document.getElementById("card").prepend(div);
 }
+// adding clear filter
+let filterdiv = document.createElement("div");
+let filterdiv2 = document.createElement("div");
+filterdiv.classList.add("d-none", "d-md-block");
+filterdiv2.classList.add("d-flex", "justify-content-between", "py-4");
+
+let fp1 = document.createElement("p");
+fp1.textContent = "FILTERS";
+fp1.classList.add("fw-bold");
+let fp2 = document.createElement("p");
+fp2.style.fontWeight = "500";
+fp2.textContent = "Clear All";
+fp2.style.color = "#42A2A2";
+fp2.addEventListener("click", function () {
+  clearFilters();
+});
+filterdiv2.append(fp1, fp2);
+filterdiv.append(filterdiv2);
+
+document.getElementById("collapse-start").prepend(filterdiv);
+
+// Adding Events
 
 function event(array) {
   array.map((element, index) => {
@@ -121,4 +162,10 @@ for (let i = 0; i < sleeves.length; i++) {
     console.log(products, np);
     displayData(np);
   });
+}
+
+//clearing filters
+
+function clearFilters() {
+  getData();
 }

@@ -38,7 +38,7 @@ function displayData(element) {
         <div class="row ">
             <div id="imgsl" class="d-flex col-2 d-none d-md-block mt-2">
                 <p class="ms-4"><i class="fa-solid fa-2x fa-angle-up  ms-xl-1 ms-xxl-2"></i></p>
-                <div><img src="${element.image}" class="img-fluid w-100 "></div>
+                <div><img src="${element.image}" class="img-fluid w-100"></div>
                 <div><img src="${element.image2}" class="img-fluid w-100 mt-2"></div>
                 <div><img src="${element.image3}" class="img-fluid w-100 mt-2"></div>
                 <div><img src="${element.image4}" class="img-fluid w-100 mt-2"></div>
