@@ -24,7 +24,7 @@ function desc() {
         </p>
       </div>
       <div class="col-12">
-        <p><span class="fw-bold">Commodity</span>Men's T-Shirt</p>
+        <p><span class="fw-bold">Commodity - </span>Men's T-Shirt</p>
       </div>
       <div class="col-12">
         <p style="color: #42a2a2" class="fw-bold">Product Specifications</p>
