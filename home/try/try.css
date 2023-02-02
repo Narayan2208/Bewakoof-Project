@@ -441,6 +441,14 @@ color: white;
 .section span{
     margin-bottom: 20px;
     color: rgb(246,216,52);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.connect{
+    margin-bottom: 20px;
+    color: rgb(246,216,52);
+    font-size: 13px;
+    letter-spacing: 1px;   
 }
 li{
     margin-top: 2px;
