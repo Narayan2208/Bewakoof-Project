@@ -1,7 +1,6 @@
 
-
-export default function navbar (){
-    return `      <!-- !Nav Upper Section -->
+ function navbar2 (){
+    return ` <!-- !Nav Upper Section -->
     <div id="nav-upper-section">
       <div id="first-section">
         <div><a href="">Offers</a></div>
@@ -52,4 +51,4 @@ export default function navbar (){
       </div>
     </div>`
 }
-// export {navbar} 
+export {navbar2} 

@@ -78,3 +78,5 @@ carousel1.addEventListener("touchmove", dragging1);
 
 document.addEventListener("mouseup", dragStop1);
 carousel1.addEventListener("touchend", dragStop1);
+
+console.log("narayanj");

@@ -1,4 +1,5 @@
 
+
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".wrapper i");
@@ -21,7 +22,7 @@ arrowIcons.forEach(icon => {
     });
 });
 
-const autoSlide = () => {
+ const autoSlide = () => {
     // if there is no image left to scroll then return from here
     if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
 
@@ -72,3 +73,6 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+
+
