@@ -22,7 +22,7 @@ async function getData() {
   AllPRoducts = data;
   return data;
 }
-// getData();
+getData();
 
 // var element = {
 //   image:
@@ -197,7 +197,7 @@ function sortLTH(array) {
 
 function sortHTL(array) {
   array.sort(function (a, b) {
-    return b.price.substring() - a.price.substring(1);
+    return b.price.substring(1) - a.price.substring(1);
   });
   displayData(array);
 }
