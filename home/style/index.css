@@ -13,7 +13,7 @@
 .parent-div{
     display: flex;
     gap: 0px 25px;
-    /* overflow: hidden; */
+    width: 100%;
 }
 .parent-div div{
     width: 100%;
@@ -23,13 +23,15 @@
     width: 100%;
 }
 .main-div{
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
 .parent-div p{
     font-size: 12px;
     font-weight: 300;
     margin-top: 15px;
+    color: black;
+    font-weight: 550;
 }
 
 /* *DESIGNS OF THE WEEK */
@@ -67,9 +69,7 @@
 
 /* * TOO HOT TO BE MISSED*/
 #hot-section{
-    /* text-align: center; */
     margin: auto;
-    /* border: 2px solid black; */
 }
 #hot-section img{
     width: 100%;

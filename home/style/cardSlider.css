@@ -1,20 +1,12 @@
 /* !card slider style */
 /* !card slider */
 
-main header{
-    width: 98%;
-    height: 60px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    justify-content: space-between;
-    border-bottom: 2px solid #ddd;
-}
+
 main{
     position: relative;
     background-image: url("https://images.bewakoof.com/web/bg-web-mc-land-page.svg");
 }
+
 .left-arrow{
     position: absolute;
     top:50%;
@@ -30,11 +22,13 @@ main{
     left: 0.3%;
     cursor: pointer;
 }
+
 .big-deal{
     position: absolute;
     left: 45%;
     top:7%;
 }
+
 .right-arrow{
     border: none;
     z-index: 50;
@@ -86,10 +80,8 @@ section::-webkit-scrollbar{
 }
 section .product{
     min-width: 18%;
-    /* height: 90%; */
     background: white;
     margin:  0 40px  0 0;
-    /* border-radius: 20px; */
     position: relative;
     left: 0;
     transition: 0.5s;

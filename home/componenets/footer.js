@@ -14,19 +14,19 @@ export default function footer (){
           </ul>
         </div>
 
-        <div>
-          <span>COMPANY</span>
+        <div class="each-section">
+          <span >COMPANY</span>
           <ul>
             <li><a href="">About Us</a></li>
             <li><a href="">We're Hiring</a></li>
             <li><a href="">Terms & Conditions</a</li>
             <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Blog</a></li>
+            <li class="margin-top"><a href="">Blog</a></li>
           </ul>
         </div>
 
-<div >
-<span class="connect">CONNECT WITH US</span>
+<div class="each-section">
+<span class="connect margin-top">CONNECT WITH US</span>
 <!-- <div> -->
   <div class="socialIcoMobile">
     <div id="first" class="mrgin-btn"><a href="https://www.facebook.com/bewakoofcom"><i class="fa-brands fa-square-facebook"></i> 4.7M People Like this</a></div>
@@ -43,7 +43,7 @@ export default function footer (){
 <!-- </div> -->
 </div>
 
-      </div>
+      </div class="disply-none">
       <!-- style="flex:0.5" -->
       <div class="section1">
       <div >

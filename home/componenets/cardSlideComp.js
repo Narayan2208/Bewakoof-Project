@@ -1,8 +1,7 @@
 function cardSlider (){
     return ` <span class="left-arrow"><i class="fa-solid fa-chevron-left"></i></span>
-  
-  
     <span class="right-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    
     <h3 class="big-deal" style="text-align:center">BIGGEST DEALS!</h3>
         
     <section>

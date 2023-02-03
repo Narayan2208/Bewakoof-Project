@@ -54,21 +54,7 @@
   .wrapper1 i:last-child{
       right: 25px;
   }
-  
-  @media screen and (max-width: 900px) {
-      .carousel1 img{
-          width: calc(100% / 2);
-      }
-  }
-  
-  @media screen and (max-width: 550px) {
-      .carousel1 img{
-          width: 100% ;
-      }
-  }
-  
-  
-  
+ 
   .wrapper1 .carousel1{
     white-space: nowrap;
     font-size: 0px;
@@ -127,6 +113,9 @@
       right: 25px;
   }
   
+
+
+
   @media screen and (max-width: 900px) {
       .carousel1 img{
           width: calc(100% / 2);
@@ -138,3 +127,30 @@
           width: 100% ;
       }
   }
+
+   
+  @media screen and (max-width: 900px) {
+    .carousel1 img{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel1 img{
+        width: 100% ;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .carousel img{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel img{
+        width: 100% ;
+    }
+}
