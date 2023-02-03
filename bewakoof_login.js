@@ -9,7 +9,9 @@ const msgDiv = document.getElementById("msg");
 
 //   let x = phoneInputField.value;
 //   console.log(x);
+
 // }
+
 function getData() {
     if (!phoneInputField.value) {
         msgDiv.innerHTML = "Please enter a phone number";

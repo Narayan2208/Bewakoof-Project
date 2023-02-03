@@ -71,6 +71,7 @@ let seconds = 30;
 
 closeButton.addEventListener("click", function () {
     modal.style.display = "none";
+    window.location.href = './bewakoof_login.html';
 });
 
 modal.style.display = "block";
