@@ -175,7 +175,7 @@ function displayData(element) {
   //adding to cart
   document.querySelector("#buttons").addEventListener("click", function (e) {
     if (e.target.textContent === "ADD TO BAG") {
-      const obj = JSON.parse(localStorage.getItem("viewProduct"));
+      const obj = JSON.parse(localStorage.getItem("product"));
       var cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(obj);
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -218,5 +218,5 @@ function displayData(element) {
 //redirecting
 function goToCart() {
   console.log("goToCart");
-  location.href("cart.html");
+  window.open("../cartPage/cart.html");
 }

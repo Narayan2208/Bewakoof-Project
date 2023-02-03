@@ -1,7 +1,9 @@
 import card from "./card.js";
 
+var AllPRoducts;
 var products;
 var preProducts;
+var currArr;
 async function getData() {
   const jsondata = await fetch("https://bewakoof-api.onrender.com/mens");
   const data = await jsondata.json();
@@ -17,10 +19,10 @@ async function getData() {
     }
   });
   displayData(data);
-
+  AllPRoducts = data;
   return data;
 }
-getData();
+// getData();
 
 // var element = {
 //   image:
@@ -59,7 +61,7 @@ function displayData(array) {
     // console.log(d);
   });
   event(array);
-
+  currArr = array;
   //adding sort element
   let div = document.createElement("div");
   let innerdiv = document.createElement("div");
@@ -116,15 +118,13 @@ function event(array) {
 let brands = document.querySelectorAll(".brand");
 for (let i = 0; i < brands.length; i++) {
   brands[i].addEventListener("click", function () {
-    var Data = getData();
-    Data.then((data) => {
-      let needBrand = brands[i].textContent;
-      let newProducts = data.filter((element) => {
-        return element.brand == needBrand;
-      });
-      products = newProducts;
-      displayData(newProducts);
+    brands[i].classList.toggle("colorAdd");
+    let needBrand = brands[i].textContent;
+    let newProducts = AllPRoducts.filter((element) => {
+      return element.brand == needBrand;
     });
+    products = newProducts;
+    displayData(newProducts);
   });
 }
 
@@ -145,6 +145,7 @@ for (let i = 0; i < colors.length; i++) {
 let sleeves = document.querySelectorAll(".sleeve");
 for (let i = 0; i < sleeves.length; i++) {
   sleeves[i].addEventListener("click", function () {
+    sleeves[i].classList.toggle("colorAdd");
     let needSlv = sleeves[i].textContent;
     needSlv = needSlv.trim();
     let np = preProducts.filter((element) => {
@@ -164,8 +165,39 @@ for (let i = 0; i < sleeves.length; i++) {
   });
 }
 
+let sorts = document.querySelectorAll(".sort");
+console.assert(sorts);
+for (let i = 0; i < sorts.length; i++) {
+  sorts[i].addEventListener("click", function () {
+    sorts[i].classList.toggle("colorAdd");
+    let needSort = sorts[i].textContent;
+    console.log(needSort);
+    if (needSort == "Low To High") {
+      sortLTH(currArr);
+    }
+    if (needSort == "High To Low") {
+      sortHTL(currArr);
+    }
+  });
+}
+
 //clearing filters
 
 function clearFilters() {
-  getData();
+  displayData(AllPRoducts);
+}
+
+function sortLTH(array) {
+  array.sort(function (a, b) {
+    return a.price.substring(1) - b.price.substring(1);
+  });
+  console.log(array);
+  displayData(array);
+}
+
+function sortHTL(array) {
+  array.sort(function (a, b) {
+    return b.price.substring() - a.price.substring(1);
+  });
+  displayData(array);
 }

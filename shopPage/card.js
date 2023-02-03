@@ -17,8 +17,8 @@ function card(element, index) {
                   <p class="fw-bold mt-0 mb-1" style="opacity:0.9;">${element.brand}</p>
                   <p class="text-truncate mt-0 mb-1">${element.title}</p>
               </div>
-              <div class="col-2">
-                  
+              <div class="col-2 ps-0 pt-4">
+                  <p><i class="fa-regular fa-2x fa-heart "></i></p>
               </div>
               
           </div>
