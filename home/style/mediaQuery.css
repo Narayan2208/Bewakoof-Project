@@ -1,12 +1,39 @@
 
 @media screen and  (max-width:844px){
+ /* ?TRENDING CATEGORIES SECTION */
+#full-width img{
+    width:145%;
+}
+#full-width{
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.full-width img{
+    width:95%;
+   
+}
+.full-width{
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 0;
+}
 
+.full-width a{
+    padding: 0;
+    margin: 0;
+}
     /* ?New Arrival section */
  .main-div{
     width: 100%;
     overflow: hidden;
  }
 
+ #spacing h6:first-child + h6 + h6 {
+    /* color: rgb(27,191,100); */
+    width: 25%;
+}
 .parent-div{
     width: 100%;
     display: grid;
@@ -222,7 +249,7 @@ font-weight: bold;
         display: none;
     }
     }
-
+   
     /* 845 860*/
     @media screen and  (min-width:845px) and (max-width:860px){
        #nav-upper-section{
@@ -265,4 +292,13 @@ font-weight: bold;
                 #nav-below-section div{
                  width: 80%;
                         }
+        }
+
+        /* 769 - 1000*/
+         @media screen and  (min-width:769px) and (max-width:1000px){
+            section .product {
+                min-width: 25%;
+                margin:  0 15px  0 0;
+                /* border:2px solid red */
+             } 
         }
