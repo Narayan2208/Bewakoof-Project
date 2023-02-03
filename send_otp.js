@@ -12,5 +12,5 @@ document.querySelector("#close-popup").addEventListener("click", function () {
     document.querySelector("#popup").style.display = "none";
 });
 document.querySelector("#get-otp").addEventListener("click", function () {
-    window.location.href = "./timer1.html";
+    window.location.href = "./otp_timer.html";
 })
