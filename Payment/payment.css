@@ -1,9 +1,0 @@
-.container >img{
-    height: 30px;
-    padding: 2px;
-}
-.container {
-    display: flex;
-    padding: 30px;
-    border: 1px solid black;
-}
